@@ -1,84 +1,222 @@
-//Finding Even or Odd Number
--------------------------------
+//TO PRINT EVEN OR ODD NUMBER
 import java.util.*;
-class Main {
-    public static void main (String [] args) {
-        Scanner obj = new Scanner(System.in);
-        int a = obj.nextInt();
-       
-        if(a%2==0)
-        System.out.println( a +"Even Number");
-        else
-        System.out.println( a +"odd Number");
-    }
-    
+class Main{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int a = obj.nextInt();
+		if(a%2==0)
+		System.out.println("Even number");
+		else
+		System.out.println("Odd number");
+	}
 }
 
-
-EQUAL OR NOT
-------------
-
+// TWO NUMBERS EQUAL OR NOT
 import java.util.*;
-class Main {
-    public static void main (String [] args) {
-        Scanner obj = new Scanner(System.in);
-        int a = obj.nextInt();
-        int b = obj.nextInt();
-        if(a==b)
-        System.out.println( a +" AND " + b  + " ARE EQUAL ");
-        else
-        System.out.println( a +" AND " + b + " ARE NOT EQUAL ") ;
-    }
-    
+class Main{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int a = obj.nextInt();
+		int b = obj.nextInt();
+		if(a==b)
+		System.out.println( a + " AND " + b + " ARE EQUAL ");
+		else
+		System.out.println(a + " AND " + b +" ARE NOT EQUAL ");
+	}
 }
 
-
-FIND GREATER VALUE
-------------------
-
+// TO CHECK VOTER ELIGIBLE FOR VOTE OR NOT
 import java.util.*;
-class Main {
-    public static void main (String [] args) {
-        Scanner obj = new Scanner(System.in);
-        int a = obj.nextInt();
-        int b = obj.nextInt();
-        if(a>=b)
-        System.out.println( a +" is graterthan" + b );
-        else
-        System.out.println( a +"is Smallerthan " + b ) ;
-    }
-    
+class Main{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int age = obj.nextInt();
+		if(age>=18)
+		System.out.println(age + " ELIGIBLE FOR VOTE ");
+		else
+		System.out.println(age + " NOT ELIGIBLE FOR VOTE ");
+	}
 }
 
-
-
-ELIGIBLE FOR VOTE
----------------
+//TO CHECK WHETHER NUMBER IS DIVISIBLE BY 3 OR NOT
 import java.util.*;
-class Main {
-    public static void main (String [] args) {
-        Scanner obj = new Scanner(System.in);
-        int age = obj.nextInt();
-        
-        if(age>=18)
-        System.out.println( age +" Eigible for vote" );
-        else
-        System.out.println( age +"Not Eligible for vote" ) ;
-    }
-    
+class Main{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int num = obj.nextInt();
+		if(num%3==0)
+		System.out.println("DIVISIBLE BY 3");
+		else
+		System.out.println(" NOT DIVISIBLE BY 3 AND REMAINDER IS " + num%3);
+	}
 }
 
+//TO CHECK GREATEST NUMBER WHEN 2 NUMBERS TAKEN
+import java.util.*;
+class Main{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int a = obj.nextInt();
+		int b = obj.nextInt();
+		if(a>=b)
+		System.out.println( a + " is greater" );
+		else
+		System.out.println( b + " is greater" );
+	}
+}
 
+//SMALLEST NUMBER WHEN 3 INPUTS TAKEN
+import java.util.*;
+class Main{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int a = obj.nextInt();
+		int b = obj.nextInt();
+		int c = obj.nextInt();
+		if(a<b && a<c)
+		System.out.println( a + " is smaller " );
+		else if(b<a && b<c)
+		System.out.println( b + " is smaller " );
+		else
+		System.out.println( c + " is smaller ");
+	}
+}
 
-CONDITION CHECKING
-------------------
-class Main {
-    public static void main(String [] args) {
-        if (2 + 2 == 4) {
-        System.out.println("welcome");
-        System.out.println("update your details");
+//to print message if is divisible with 2 numbers 
+import java.util.*;
+class Main{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int a = obj.nextInt();
+		if(a%3 == 0 && a%5 == 0)
+		System.out.println(" hihello ");
+		else if(a%3 == 0)
+		System.out.println(" hi ");
+		else if(a%5 == 0)
+		System.out.println(" hello ");
+	}
+}
+
+//LEAP YEAR OR NOT
+import java.util.*;
+class Main{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int a = obj.nextInt();
+		if(a%400 == 0 (a%4==0&& a%100! == 0)
+		System.out.println(" LEAP YEAR");
+		else 
+		System.out.println(" NOT LEAP YEAR");
+		
+	}
+}
+
+//SWITCH CASE
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        switch(n)
+        {
+            case 1:
+                System.out.print("CSE");
+                break;
+            case 2:
+                System.out.println("ECE");
+                break;
+            case 3:
+                System.out.println("EEE");
+                break;
+                default:
+                System.out.println("Invalid input");
         }
-        else
-        System.out.println("thank you");
+
+//to print n natural numbers 
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int i;
+        for(i=1;i<=n;i++)
+        System.out.println(i+ " ");
     }
 }
+
+// when taking inputs from user 
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        int n1 = obj.nextInt();
+        int n2 = obj.nextInt();
+        int i,sum = 0;
+        for(i=n1;i<=n2;i++){
+        sum = sum + i;
+        System.out.print(sum + " ");  
+        }
+    }    
+}
+
+//factors of a given number
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        
+        int i;
+        for(i=1;i<=n/2;i++){
+            if(n%i == 0)
+        
+        System.out.print(i + " "); 
+        }
+        System.out.println(n);
+        
+    }    
+}
+
+//to print factorial
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        
+        int n = obj.nextInt();
+        
+        int i,mult=1;
+        for(i=1;i<=n;i++){
+       
+        mult *= i; 
+        
+    
+        
+        System.out.print(mult + " "); 
+        }
+        
+        
+    }    
+}
+//to print tables
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        
+        int n = obj.nextInt();
+        int t = obj.nextInt();
+        int i;
+        
+        for(i=1;i<=n;i++)
+        System.out.printf("%d * %d = %d\n",i,t,i*t); 
+        
+        
+        
+    }
