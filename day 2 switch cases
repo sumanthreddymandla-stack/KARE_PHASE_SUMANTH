@@ -1,0 +1,109 @@
+//SWITCH CASE
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        switch(n)
+        {
+            case 1:
+                System.out.print("CSE");
+                break;
+            case 2:
+                System.out.println("ECE");
+                break;
+            case 3:
+                System.out.println("EEE");
+                break;
+                default:
+                System.out.println("Invalid input");
+        }
+
+//to print n natural numbers 
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int i;
+        for(i=1;i<=n;i++)
+        System.out.println(i+ " ");
+    }
+}
+
+// when taking inputs from user 
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        int n1 = obj.nextInt();
+        int n2 = obj.nextInt();
+        int i,sum = 0;
+        for(i=n1;i<=n2;i++){
+        sum = sum + i;
+        System.out.print(sum + " ");  
+        }
+    }    
+}
+
+//factors of a given number
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        
+        int i;
+        for(i=1;i<=n/2;i++){
+            if(n%i == 0)
+        
+        System.out.print(i + " "); 
+        }
+        System.out.println(n);
+        
+    }    
+}
+
+//to print factorial
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        
+        int n = obj.nextInt();
+        
+        int i,mult=1;
+        for(i=1;i<=n;i++){
+       
+        mult *= i; 
+        
+    
+        
+        System.out.print(mult + " "); 
+        }
+        
+        
+    }    
+}
+//to print tables
+import java.util.*;
+class Main
+{
+    public static void main (String[] args){
+        Scanner obj = new Scanner(System.in);
+        
+        int n = obj.nextInt();
+        int t = obj.nextInt();
+        int i;
+        
+        for(i=1;i<=n;i++)
+        System.out.printf("%d * %d = %d\n",i,t,i*t); 
+        
+        
+        
+    }
