@@ -1,0 +1,119 @@
+// to count no of digitsw in given number
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int c = 0;
+        while (n!=0)
+        {
+            n = n/10;
+            c++;
+        }
+        System.out.print("No of digits "+c);
+    }
+}
+
+
+// to reverse a number rightside combination
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int d,ans=0;
+        while (n!=0)
+        {
+            d = n%10;
+            ans=ans*10+d;
+            n=n/10;
+        }
+        System.out.print("Reverse Number :"+ans);
+    }
+}
+
+// to reverse a number without rightside combination
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int d;
+        while (n!=0)
+        {
+            d = n%10;
+            System.out.print(d);
+            n=n/10;
+        }
+        
+    }
+}
+
+
+//to found even digits and odd digits in the gtiven number 
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int d,ec=0,oc=0;
+        while (n!=0)
+        {
+            d = n%10;
+            if(d%2==0)
+            ec++;
+            else
+            oc++;
+            n=n/10;
+        }
+        System.out.println("odd digit count: "+oc);
+        System.out.println("Even digit count: "+ec);
+        
+    }
+}
+
+
+//to count prime digits in the given number
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int c =0,d;
+        while (n!=0)
+        {
+            d = n%10;
+            if(d==2||d==3||d==5||d==7)
+            c++;
+            n=n/10;
+        }
+        System.out.println("prime digit count: "+c);
+        
+    }
+}
+
+
+// to check whether the number is palindrome or not palindrome
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+
+        int n = obj.nextInt();
+        int original = n;
+        int reverse = 0;
+
+        while (n != 0) {
+            int digit = n % 10;
+            reverse = reverse * 10 + digit;
+            n = n / 10;
+        }
+
+        if (original == reverse) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }
+    }
+}
