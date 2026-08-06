@@ -1,0 +1,81 @@
+// to print a single number from a array
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int arr[] = new int[n];
+        int i,m=0;
+        for(i=0;i<n;i++){
+            arr[i]=obj.nextInt();
+            m=m^arr[i];
+        }
+        System.out.print("Single Number: "+m);
+    }
+}
+
+// to find missing number in given array
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int arr[] = new int[n-1];
+        int i,sum=0;
+        for(i=0;i<n-1;i++){
+            arr[i]=obj.nextInt();
+            sum=sum+arr[i];
+        }
+        int sumn = n*(n + 1)/2;
+        System.out.print("Missing Number: "+(sumn-sum));
+    }
+}
+
+//to print zeors at right side in given array
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int arr[] = new int[n];
+        int i,zc=0;
+        for(i=0;i<n;i++){
+            arr[i]=obj.nextInt();
+            if(arr[i]==0)
+            zc++;
+        }
+        for(i=0;i<zc;i++)
+        arr[i]=0;
+        for(i=zc;i<n;i++)
+        arr[i]=1;
+        for(i=0;i<n;i++)
+        System.out.print(arr[i]+" ");
+    }
+}
+
+//to print numbers in increasing order
+
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int arr[] = new int[n];
+        int i,zc=0,oc=0;
+        for(i=0;i<n;i++){
+            arr[i]=obj.nextInt();
+            if(arr[i]==0)
+            zc++;
+            else if(arr[i]==1)
+            oc++;
+        }
+        for(i=0;i<zc;i++)
+        arr[i]=0;
+        for(i=zc;i<zc+oc;i++)
+        arr[i]=1;
+        for(i=zc+oc;i<n;i++)
+        arr[i]=2;
+        for(i=0;i<n;i++)
+        System.out.print(arr[i]+" ");
+    }
+}
