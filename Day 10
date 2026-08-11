@@ -1,0 +1,150 @@
+// to print 2x2 matrix
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+		System.out.println("Enter no of rows: ");
+		int r = obj.nextInt();
+		System.out.println("Enter no of coloums: ");
+		int c = obj.nextInt();
+		int arr[][] = new int[r][c];
+		int i,j;
+		System.out.println("Enter array elements: ");
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        arr[i][j] = obj.nextInt();
+		    }
+		}
+		for(i=0;i<r;i++,System.out.println()){
+		    for(j=0;j<c;j++)
+		    System.out.print(arr[i][j]+ " ");
+		}
+	}
+}
+
+//sum of  elements in a matrix
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+		System.out.println("Enter no of rows: ");
+		int r = obj.nextInt();
+		System.out.println("Enter no of coloums: ");
+		int c = obj.nextInt();
+		int arr[][] = new int[r][c];
+		int i,j,sum=0;
+		System.out.println("Enter array elements: ");
+		for(i=0;i<r;i++){
+		    for(j=0;j<c;j++){
+		        arr[i][j] = obj.nextInt();
+		        sum=sum+arr[i][j];
+		    }
+		}
+		    System.out.print("Sum of Elements: "+sum);
+		}
+	}
+
+//to print diagnols of a matrix
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+
+        int n = obj.nextInt();
+        int arr[][] = new int[n][n];
+
+        int i, j;
+
+        System.out.println("Enter array elements:");
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < n; j++) {
+                arr[i][j] = obj.nextInt();
+            }
+        }
+
+        System.out.print("First Diagonal elements: ");
+        for (i = 0; i < n; i++) {
+            System.out.print(arr[i][i] + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Second Diagonal elements: ");
+        for (i = 0; i < n; i++) {
+            System.out.print(arr[i][n - 1 - i] + " ");
+        }
+    }
+}
+
+
+// transpose a matrix
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+
+        int n = obj.nextInt();
+        int arr[][] = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                arr[i][j] = obj.nextInt();
+            }
+        }
+
+        // Transpose
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int temp = arr[i][j];
+                arr[i][j] = arr[j][i];
+                arr[j][i] = temp;
+            }
+        }
+
+        // Print
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+//to print length      of string with out using in built method
+import java.util.*;
+class Main{
+    public static void main(String[]args){
+        Scanner obj = new Scanner(System.in);
+        String s = obj.nextLine();
+        int c = 0;
+        for(char ch:s.toCharArray())
+        c++;
+        System.out.print(c);
+    }
+}
+
+
+//to print no of words
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+
+        String s = obj.nextLine();
+        int c = 0;
+
+        for (char ch : s.toCharArray()) {
+            if (ch == ' ') {
+                c++;
+            }
+        }
+
+        System.out.print("Total Number of words: " + (c + 1));
+    }
+}
