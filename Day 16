@@ -1,0 +1,204 @@
+// Sum of elements in doubly linked list//
+
+class Main {
+    static class Node {
+        int data;
+        Node prev, next;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node(10);
+        Node second = new Node(20);
+        Node third = new Node(30);
+
+        head.next = second;
+        second.prev = head;
+
+        second.next = third;
+        third.prev = second;
+
+        int sum = 0;
+        Node temp = head;
+
+        while (temp != null) {
+            sum += temp.data;
+            temp = temp.next;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+
+//Maximum elements in doubly linked list 
+
+class Node {
+    int data;
+    Node prev, next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Node head = new Node(10);
+        Node second = new Node(25);
+        Node third = new Node(15);
+        Node fourth = new Node(40);
+        Node fifth = new Node(30);
+
+        head.next = second;
+        second.prev = head;
+
+        second.next = third;
+        third.prev = second;
+
+        third.next = fourth;
+        fourth.prev = third;
+
+        fourth.next = fifth;
+        fifth.prev = fourth;
+
+        int max = head.data;
+        Node temp = head;
+
+        while (temp != null) {
+            if (temp.data > max) {
+                max = temp.data;
+            }
+            temp = temp.next;
+        }
+
+        System.out.println("Maximum element = " + max);
+    }
+}
+
+//print elements in reverse order 
+
+class Node {
+    int data;
+    Node prev, next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Node head = new Node(10);
+        Node second = new Node(20);
+        Node third = new Node(30);
+        Node fourth = new Node(40);
+
+        head.next = second;
+        second.prev = head;
+
+        second.next = third;
+        third.prev = second;
+
+        third.next = fourth;
+        fourth.prev = third;
+
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.prev;
+        }
+    }
+}
+
+
+//Sort the doubly linked list
+
+class Node {
+    int data;
+    Node prev, next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Node head = new Node(40);
+        Node second = new Node(10);
+        Node third = new Node(30);
+        Node fourth = new Node(20);
+
+        head.next = second;
+        second.prev = head;
+
+        second.next = third;
+        third.prev = second;
+
+        third.next = fourth;
+        fourth.prev = third;
+
+        for (Node i = head; i != null; i = i.next) {
+            for (Node j = i.next; j != null; j = j.next) {
+                if (i.data > j.data) {
+                    int temp = i.data;
+                    i.data = j.data;
+                    j.data = temp;
+                }
+            }
+        }
+
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+}
+
+
+//Insert elements in doubly linked list
+
+class Node {
+    int data;
+    Node prev, next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Node head = null;
+
+        Node newNode = new Node(10);
+        head = newNode;
+
+        newNode = new Node(20);
+        head.next = newNode;
+        newNode.prev = head;
+
+        newNode = new Node(30);
+        head.next.next = newNode;
+        newNode.prev = head.next;
+
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+}
