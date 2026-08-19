@@ -1,0 +1,508 @@
+//sum of the elements in circular singly linked list
+
+class Main {
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node(10);
+        Node n2 = new Node(20);
+        Node n3 = new Node(30);
+        Node n4 = new Node(40);
+
+        head.next = n2;
+        n2.next = n3;
+        n3.next = n4;
+        n4.next = head;   
+
+        int sum = 0;
+        Node temp = head;
+
+        do {
+            sum += temp.data;
+            temp = temp.next;
+        } while (temp != head);
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+
+//sum of the elements in circular  double linked list
+
+class Main {
+    static class Node {
+        int data;
+        Node next, prev;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node(10);
+        Node n2 = new Node(20);
+        Node n3 = new Node(30);
+        Node n4 = new Node(40);
+
+        head.next = n2;
+        n2.prev = head;
+
+        n2.next = n3;
+        n3.prev = n2;
+
+        n3.next = n4;
+        n4.prev = n3;
+
+        n4.next = head;   
+        head.prev = n4;
+
+        int sum = 0;
+        Node temp = head;
+
+        do {
+            sum += temp.data;
+            temp = temp.next;
+        } while (temp != head);
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+//sort elements in circular singly linked list 
+
+class Main {
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node(30);
+        Node n2 = new Node(10);
+        Node n3 = new Node(40);
+        Node n4 = new Node(20);
+
+        head.next = n2;
+        n2.next = n3;
+        n3.next = n4;
+        n4.next = head;
+
+        Node i = head;
+
+        do {
+            Node j = i.next;
+
+            while (j != head) {
+                if (i.data > j.data) {
+                    int temp = i.data;
+                    i.data = j.data;
+                    j.data = temp;
+                }
+                j = j.next;
+            }
+
+            i = i.next;
+        } while (i != head);
+
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+    }
+}
+
+//sort elements in circular doubly linked list
+
+class Main {
+    static class Node {
+        int data;
+        Node next, prev;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node(30);
+        Node n2 = new Node(10);
+        Node n3 = new Node(40);
+        Node n4 = new Node(20);
+
+        head.next = n2;
+        n2.prev = head;
+
+        n2.next = n3;
+        n3.prev = n2;
+
+        n3.next = n4;
+        n4.prev = n3;
+
+        n4.next = head;
+        head.prev = n4;
+
+        Node i = head;
+
+        do {
+            Node j = i.next;
+
+            while (j != head) {
+                if (i.data > j.data) {
+                    int temp = i.data;
+                    i.data = j.data;
+                    j.data = temp;
+                }
+                j = j.next;
+            }
+
+            i = i.next;
+        } while (i != head);
+
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+    }
+}
+
+
+//maximum elements in circular singly linked list
+
+class Main {
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node(30);
+        Node n2 = new Node(10);
+        Node n3 = new Node(50);
+        Node n4 = new Node(20);
+
+        head.next = n2;
+        n2.next = n3;
+        n3.next = n4;
+        n4.next = head;
+
+        int max = head.data;
+        Node temp = head;
+
+        do {
+            if (temp.data > max) {
+                max = temp.data;
+            }
+            temp = temp.next;
+        } while (temp != head);
+
+        System.out.println("Maximum = " + max);
+    }
+}
+
+
+
+//maximum elements in circular doubly linked list
+
+class Main {
+    static class Node {
+        int data;
+        Node next, prev;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    public static void main(String[] args) {
+        Node head = new Node(30);
+        Node n2 = new Node(10);
+        Node n3 = new Node(50);
+        Node n4 = new Node(20);
+
+        head.next = n2;
+        n2.prev = head;
+
+        n2.next = n3;
+        n3.prev = n2;
+
+        n3.next = n4;
+        n4.prev = n3;
+
+        n4.next = head;
+        head.prev = n4;
+
+        int max = head.data;
+        Node temp = head;
+
+        do {
+            if (temp.data > max) {
+                max = temp.data;
+            }
+            temp = temp.next;
+        } while (temp != head);
+
+        System.out.println("Maximum = " + max);
+    }
+}
+
+
+//insert elements in circular singly linked list
+
+class Main {
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    static Node head = null;
+
+    static void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+        } else {
+            Node temp = head;
+
+            while (temp.next != head) {
+                temp = temp.next;
+            }
+
+            temp.next = newNode;
+            newNode.next = head;
+        }
+    }
+
+    static void display() {
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+    }
+
+    public static void main(String[] args) {
+        insert(10);
+        insert(20);
+        insert(30);
+        insert(40);
+
+        display();
+    }
+}
+
+//insert elements in circular doubly linked list
+
+class Main {
+    static class Node {
+        int data;
+        Node next, prev;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    static Node head = null;
+
+    static void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+            newNode.prev = head;
+        } else {
+            Node last = head.prev;
+
+            newNode.next = head;
+            newNode.prev = last;
+
+            last.next = newNode;
+            head.prev = newNode;
+        }
+    }
+
+    static void display() {
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+    }
+
+    public static void main(String[] args) {
+        insert(10);
+        insert(20);
+        insert(30);
+        insert(40);
+
+        display();
+    }
+}
+
+
+//reverse  elements in circular singly linked list
+
+class Main {
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    static Node head = null;
+
+    static void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+        } else {
+            Node temp = head;
+
+            while (temp.next != head) {
+                temp = temp.next;
+            }
+
+            temp.next = newNode;
+            newNode.next = head;
+        }
+    }
+
+    static void reverse() {
+        Node prev = null;
+        Node current = head;
+        Node next;
+
+        do {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        } while (current != head);
+
+        head.next = prev;
+        head = prev;
+    }
+
+    static void display() {
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+    }
+
+    public static void main(String[] args) {
+        insert(10);
+        insert(20);
+        insert(30);
+        insert(40);
+
+        reverse();
+
+        display();
+    }
+}
+
+
+//reverse  elements in circular doubly linked list
+
+class Main {
+    static class Node {
+        int data;
+        Node next, prev;
+
+        Node(int data) {
+            this.data = data;
+        }
+    }
+
+    static Node head = null;
+
+    static void insert(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            newNode.next = head;
+            newNode.prev = head;
+        } else {
+            Node last = head.prev;
+
+            newNode.next = head;
+            newNode.prev = last;
+
+            last.next = newNode;
+            head.prev = newNode;
+        }
+    }
+
+    static void reverse() {
+        Node current = head;
+
+        do {
+            Node temp = current.next;
+            current.next = current.prev;
+            current.prev = temp;
+
+            current = temp;
+        } while (current != head);
+
+        head = head.next;
+    }
+
+    static void display() {
+        Node temp = head;
+
+        do {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        } while (temp != head);
+    }
+
+    public static void main(String[] args) {
+        insert(10);
+        insert(20);
+        insert(30);
+        insert(40);
+
+        reverse();
+
+        display();
+    }
+}
+
